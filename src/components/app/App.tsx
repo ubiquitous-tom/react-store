@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo192.png';
+// import logo, { ReactComponent as ReactLogo } from '../../assets/img/logo.svg';
 import './App.css';
+// import { TextField } from '../TextField/TextField';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="" className="App-logo" alt="logo" />
         <p>
           Edit
           <code>src/App.tsx</code>
@@ -21,6 +22,8 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+
+
       </header>
     </div>
   );
