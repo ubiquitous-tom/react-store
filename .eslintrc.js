@@ -6,17 +6,18 @@ module.exports = {
     // "plugin:@typescript-eslint/recommended", // A plugin that contains a bunch of ESLint rules that are TypeScript specific.
     // 'prettier/@typescript-eslint',  // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
     // 'plugin:prettier/recommended',  // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
-    "plugin:jest/recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    // "prettier",
     "prettier/@typescript-eslint",
-    "prettier/react",
+    // "plugin:prettier/recommended",
+    // "plugin:jest/recommended",
+    // "prettier",
+    // "prettier/react",
   ],
   plugins: [
     "@typescript-eslint",
+    "react-hooks",
     "import",
     "jest",
     "react",
@@ -39,6 +40,35 @@ module.exports = {
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+
+    /**
+     * @description rules of eslint official
+     */
+    "arrow-body-style": [
+      "error",
+      "always"
+    ],
+    /**
+     * @bug https://github.com/benmosher/eslint-plugin-import/issues/1282
+     * "import/named" temporary disable.
+     */
+    "import/named": "off",
+    /**
+     * @bug?
+     * "import/export" temporary disable.
+     */
+    "import/export": "off",
+    "import/prefer-default-export": "off", // Allow single Named-export
+    "no-unused-expressions": ["warn", {
+      "allowShortCircuit": true,
+      "allowTernary": true
+    }], // https://eslint.org/docs/rules/no-unused-expressions
+
+    /**
+     * @description rules of @typescript-eslint
+     */
+    // "@typescript-eslint/prefer-interface": "off", // also want to use "type"
+    // "@typescript-eslint/explicit-function-return-type": "off", // annoying to force return type
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
@@ -46,10 +76,31 @@ module.exports = {
         "allowTypedFunctionExpressions": true
       }
     ],
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
-    'import/no-extraneous-dependencies': [2, { devDependencies: ['**/test.tsx', '**/test.ts'] }],
-    '@typescript-eslint/indent': [2, 2],
-    "react/prop-types": [0],
+    /**
+     * @description rules of eslint-plugin-react
+     */
+    "react/jsx-filename-extension": ["warn", {
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
+    }],
+    "react/prop-types": "off", // Is this incompatible with TS props type?
+
+    /**
+     * @description rules of eslint-plugin-react-hooks
+     */
+    "react-hooks/rules-of-hooks": "error",
+
+    /**
+     * @description rules of eslint-plugin-prettier
+     */
+    // "prettier/prettier": [
+    //   "error", {
+    //     "singleQuote": true,
+    //     "semi": false
+    //   }
+    // ],
+
+    "import/no-extraneous-dependencies": [2, { devDependencies: ['**/test.tsx', '**/test.ts'] }],
+    "@typescript-eslint/indent": [2, 2],
   },
   settings: {
     react: {
