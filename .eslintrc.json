@@ -1,0 +1,72 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript",
+        "prettier/@typescript-eslint"
+    ],
+    "plugins": ["@typescript-eslint", "react-hooks", "import", "jest", "react", "prettier"],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "useJSXTextNode": true
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true,
+        "node": true
+    },
+    "rules": {
+        "arrow-body-style": [
+            "error",
+            "always"
+        ],
+        "import/named": "off",
+        "import/export": "off",
+        "import/prefer-default-export": "off",
+        "no-unused-expressions": [
+            "warn",
+            {
+                "allowShortCircuit": true,
+                "allowTernary": true
+            }
+        ],
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                "allowExpressions": true,
+                "allowTypedFunctionExpressions": true
+            }
+        ],
+        "react/jsx-filename-extension": [
+            "warn",
+            {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        ],
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "import/no-extraneous-dependencies": [
+            2,
+            {
+                "devDependencies": ["**/test.tsx", "**/test.ts"]
+            }
+        ],
+        "@typescript-eslint/indent": [
+            2,
+            2
+        ]
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    },
+    "parser": "@typescript-eslint/parser"
+}
