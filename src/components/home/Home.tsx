@@ -14,7 +14,7 @@ export const Home: React.FC = () => {
       <Header />
       <div className="page-wrap" id="contentSection">
         <Hero />
-        <Callout />
+        {/* <Callout /> */}
         <Content />
         <Gift />
         {/*

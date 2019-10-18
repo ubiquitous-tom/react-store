@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
           <div id="landing-hero-1" className={landingHeroClasses}>
             <div className="image first" />
             <div className="hero-item">
-              <h3>Subscribe</h3>
+              <h3>Membership Options</h3>
               <a href="#membership">
                 <button type="button">Buy Now</button>
               </a>

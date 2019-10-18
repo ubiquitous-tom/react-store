@@ -10,6 +10,7 @@ import {
 // import logo from '../../assets/img/logo.svg';
 import './App.css';
 import { Home } from '../home/Home';
+import { Membership } from '../membership/Membership';
 import { Give } from '../give/Give';
 import { NoMatch } from '../no-match/NoMatch';
 
@@ -59,6 +60,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/give" component={Give} />
+        <Route exact path="/membership" component={Membership} />
         <Route component={NoMatch} />
       </Switch>
     </HashRouter>
