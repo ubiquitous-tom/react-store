@@ -55,25 +55,13 @@ const App: React.FC = () => {
   // );
 
   return (
-    <div>
-      <Router>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/#give">Give</Link>
-          </li>
-        </ul>
-      </Router>
-      <HashRouter basename="/" hashType="noslash">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/give" component={Give} />
-          <Route component={NoMatch} />
-        </Switch>
-      </HashRouter>
-    </div>
+    <HashRouter basename="/" hashType="noslash">
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/give" component={Give} />
+        <Route component={NoMatch} />
+      </Switch>
+    </HashRouter>
   );
 };
 
