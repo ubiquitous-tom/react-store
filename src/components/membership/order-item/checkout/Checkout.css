@@ -1,8 +1,10 @@
-.order-item {
-  overflow: hidden;
-  padding: 2.5em 2.1em;
-  background: #fff;
-  border: 0.1em solid rgba(0, 0, 0, 0.075);
-  box-sizing: border-box;
+.btn-primary {
+  background-color: #0b98b8fc;
+  border-color: transparent;
   border-radius: 0;
+}
+
+.btn{
+  text-decoration: none !important;
+  padding:10px;
 }
