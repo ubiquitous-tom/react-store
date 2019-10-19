@@ -1,0 +1,89 @@
+.order-item {
+  overflow: hidden;
+  padding: 2.5em 2.1em;
+  background: #fff;
+  border: 0.1em solid rgba(0, 0, 0, 0.075);
+  border-top: none;
+  box-sizing: border-box;
+}
+.order-item:first-child {
+  border-radius: 0.1em 0.1em 0 0;
+  border-top: 0.1em solid rgba(0, 0, 0, 0.075);
+}
+.order-item:last-child {
+  border-radius: 0;
+}
+
+.order-item img {
+  margin-left: 2.25em;
+  width: 125px;
+}
+
+.order-item .price {
+  color: #424242;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+.order-item hr {
+  border: .5px solid rgba(0, 0, 0, 0.075);
+  max-width: 27em;
+}
+
+.order-item h3 {
+  font-size: 1.8em;
+  color: #494949;
+  line-height: 1.25em;
+  font-weight: lighter;
+  font-weight: 400;
+}
+
+.order-item.slim {
+  padding: 2em 2.1em;
+}
+.order-item.slim img {
+  max-width: 11.5em;
+  margin: 0 auto;
+}
+.order-item.slim .span7.left p {
+  line-height: 1.4em;
+  margin-bottom: .4em;
+}
+.order-item.slim hr {
+  margin-top: 0;
+  margin-bottom: .6em;
+}
+.order-item.slim .remove {
+  margin-bottom: 0;
+}
+.order-item.slim .price {
+  margin-bottom: 0;
+}
+.order-item.slim .qty {
+  font-size: 1.4em;
+  margin-bottom: .7em;
+  padding-right: 0;
+}
+.order-item.gift-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-item .item-price {
+  margin: 15px 0;
+}
+
+.order-total {
+  padding: 2.5em 2.1em;
+  border: 0.1em solid rgba(0, 0, 0, 0.075);
+  font-weight: bold;
+}
+
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .order-item.slim .price {
+    margin-top: 1em; 
+  }
+}

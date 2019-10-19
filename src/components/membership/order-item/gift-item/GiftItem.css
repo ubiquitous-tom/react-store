@@ -1,0 +1,21 @@
+p {
+  margin: 0 0 1em;
+  font-family: inherit;
+  font-size: 1.1em;
+  line-height: 25px;
+}
+label {
+  font-weight: 400;
+}
+select {
+  display: inline-block;
+}
+select#qty {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125em;
+  color: #424242;
+  line-height: 2.5em;
+  height: 2.5em;
+  width: 4.5em;
+}
+

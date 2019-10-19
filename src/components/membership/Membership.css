@@ -1,0 +1,122 @@
+.give .order-items img {
+  margin-left: -1.75em; 
+}
+
+.giveDetails {
+  margin-bottom: 2em; 
+}
+
+.giveDetails img {
+  float: right;
+  margin-bottom: 16px;
+  width: 110px; 
+}
+
+section.benefits {
+  margin: 1.6em 0 3em 0; 
+}
+section.benefits h3 {
+  font-size: 1.3em;
+  margin-bottom: .4em; 
+}
+section.benefits span {
+  width: 92%;
+  display: inline-block; 
+}
+
+section.memberOptIn h4 {
+  margin-bottom: .4em; 
+}
+section.memberOptIn span {
+  display: block; 
+}
+section.memberOptIn label {
+  font-weight: normal;
+  display: inline-block;
+  font-size: .95em;
+  margin-top: .7em; 
+}
+section.memberOptIn input[type='checkbox'] {
+  margin-top: -2px;
+  margin-right: 7px;
+  font-size: 1.3em; 
+}
+section.memberOptIn p {
+  color: #000;
+  margin: 2.2em 0 0 2em; 
+}
+
+
+
+.recBooks h4 {
+  color: #933;
+  font-size: 1.6em;
+}
+
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+/* @media (max-width: 480px) { */
+@media (max-width: 768px) {
+  .give .row-fluid [class*="span"]:first-child {}
+
+  .give .order-items img {
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+
+  .give ul.details {
+    margin-bottom: 2em;
+  }
+
+  .give select#qty {
+    margin-bottom: 1.5em !important;
+  }
+}
+/**  ROUTING PAGE  **/
+.routing .order-items .span6:first-child {
+  padding-right: 7.762431%;
+  margin-right: 0;
+}
+
+.routing .order-items .span6:last-child {
+  border-left: .075em solid #ededed;
+  padding-left: 7.762431%;
+  margin-left: 0;
+}
+
+.routing .order-items h2 {
+  color: #933;
+}
+
+.routing .btn {
+  margin: 0 !important;
+  float: none !important;
+}
+
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .routing .order-items .span6:first-child {
+    padding-right: 0;
+    margin-right: inherit; 
+  }
+
+  .routing .order-items .span6:last-child {
+    border-left: none;
+    padding-left: 0;
+    margin-left: inherit;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .routing .btn {
+    width: 100% !important;
+    margin: .5em 0 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+  }
+}

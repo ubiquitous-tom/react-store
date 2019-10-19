@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './SignUpForm.css';
+
 export const SignUpForm: React.FC = () => {
   return (
     <aside id="signUpForm" className="sign-in">
@@ -11,8 +13,8 @@ export const SignUpForm: React.FC = () => {
             <label htmlFor="firstName" className="control-label">
             First Name *
               <span>(Required)</span>
-              <input id="firstName" className="form-control" name="firstName" type="text" defaultValue="" />
             </label>
+            <input id="firstName" className="form-control" name="firstName" type="text" defaultValue="" />
           </div>
         </div>
         <div className="col-md-5">
@@ -20,8 +22,8 @@ export const SignUpForm: React.FC = () => {
             <label htmlFor="lastName" className="control-label">
             Last Name *
               <span>(Required)</span>
-              <input id="lastName" className="form-control" name="lastName" type="text" defaultValue="" />
             </label>
+            <input id="lastName" className="form-control" name="lastName" type="text" defaultValue="" />
           </div>
         </div>
       </div>
@@ -32,8 +34,8 @@ export const SignUpForm: React.FC = () => {
             <label htmlFor="email" className="control-label">
             Email Address
               <span>(Required)</span>
-              <input id="email" className="form-control" name="email" type="text" defaultValue="" />
             </label>
+            <input id="email" className="form-control" name="email" type="text" defaultValue="" />
           </div>
         </div>
       </div>

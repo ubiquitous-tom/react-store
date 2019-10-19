@@ -1,0 +1,20 @@
+.sign-in, .signedIn {
+  background-color: #fbfbfb;
+  border: solid #ededed 1px;
+  overflow: hidden;
+  padding: 1.5em 2em; 
+}
+.sign-in aside {}
+.sign-in h4, .signedIn h4 {
+  color: #933;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+.sign-in h4 span {
+  color: #000;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.sign-in label {
+  font-weight: 300;
+}
