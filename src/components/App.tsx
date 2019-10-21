@@ -7,12 +7,17 @@ import {
   Link,
   RouteComponentProps,
 } from 'react-router-dom';
-// import logo from '../../assets/img/logo.svg';
+
+// import logo from './logo.svg';
+
 import './App.css';
-import { Home } from '../home/Home';
-import { Membership } from '../membership/Membership';
-import { Give } from '../give/Give';
-import { NoMatch } from '../no-match/NoMatch';
+
+import { Home } from './home/Home';
+import { Membership } from './membership/Membership';
+import { Give } from './give/Give';
+import { NoMatch } from './no-match/NoMatch';
+import { EditBilling } from './edit-billing/EditBilling';
+import { ReviewPurchase } from './reviewPurchase/ReviewPurchase';
 
 // import { TextField } from '../TextField/TextField';
 
@@ -29,7 +34,7 @@ const App: React.FC = () => {
   // return (
   //   <div className="App">
   //     <header className="App-header">
-  //       <img src="/logo192.png" className="App-logo" alt="logo" />
+  //       <img src="/logo.svg" className="App-logo" alt="logo" />
   //       <p>
   //         Edit
   //         <code>src/App.tsx</code>
@@ -61,6 +66,8 @@ const App: React.FC = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/give" component={Give} />
         <Route exact path="/membership" component={Membership} />
+        <Route exact path="/editBilling" component={EditBilling} />
+        <Route exact path="/reviewPurchase" component={ReviewPurchase} />
         <Route component={NoMatch} />
       </Switch>
     </HashRouter>

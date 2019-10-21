@@ -1,0 +1,36 @@
+.btn-primary {
+  background-color: #0b98b8fc;
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover:active {
+  background-color: #0B7EB8;
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.btn-success {
+  background-color: #993333;
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus,
+.btn-success:hover:active {
+  background-color: #8a221b;
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.btn,
+.btn a,
+.nav a {
+  text-decoration: none !important;
+  padding:10px;
+}

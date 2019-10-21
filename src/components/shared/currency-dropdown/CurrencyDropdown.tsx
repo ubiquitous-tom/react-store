@@ -1,6 +1,7 @@
 import React from 'react';
+import './CurrencyDropdown.css';
 
-export const CurrentDropdown: React.FC = () => {
+export const CurrencyDropdown: React.FC = () => {
   return (
     <section className="currency">
       <label htmlFor="currency-select" className="control-label">

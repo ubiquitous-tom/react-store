@@ -1,0 +1,93 @@
+/**  BILLING PAGE  **/
+.billing .order-summary {
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  border-radius: 2px;
+  padding: 2em 4em 2em 2.5em;
+}
+
+.billing .order-summary h3 {
+  font-weight: bold;
+  font-size: 1.125em;
+  margin-bottom: .125em;
+}
+
+.billing td.price.text-right {
+  font-size: 1em;
+  font-family: inherit;
+  color: #424242;
+}
+
+.billing .order-summary table {
+  width: 100%;
+}
+
+.order-item.billing {
+  border-top: 0.45em solid rgba(0, 0, 0, 0.075);
+}
+
+.billing p.update-order {
+  margin: 0.75em 0 0;
+}
+
+
+
+.billing .update-order a {
+  font-size: 0.9em !important;
+  text-decoration: underline;
+}
+
+.billing h3.formhead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  font-size: 1.75em;
+  line-height: 1.5em;
+  padding-bottom: 5px;
+}
+
+.billing .order-items {
+  margin-top: -1.25em;
+}
+
+.billing .acorn-login {
+  margin: 1em 0 3em;
+}
+
+.billing .acorn-login strong {
+  color: #933;
+}
+
+.billing .btn {
+  margin: 0 !important;
+  /* float: none !important; */
+}
+
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .billing .order-items {
+    padding: 1.5em 1.5em;
+  }
+
+  .billing .order-summary {
+    margin-bottom: 2em;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .billing .order-items {
+    padding: 1.5em 1.5em;
+  }
+
+  .billing .btn {
+    width: 100% !important;
+    margin: .5em 0 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+    float: none !important;
+  }
+
+  .billing .btn [class^="icon-"], .billing .btn [class*=" icon-"] {
+    display: none;
+  }
+}

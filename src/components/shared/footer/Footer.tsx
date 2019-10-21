@@ -4,9 +4,6 @@ import {
   Link,
   RouteComponentProps,
 } from 'react-router-dom';
-import { jsxAttribute } from '@babel/types';
-import { any, string } from 'prop-types';
-
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -42,7 +39,11 @@ export const Footer: React.FC = () => {
     <footer>
       <div className="container">
         <div className="copyright">
-          <p>{`&copy; ${year} RLJ Entertainment, Inc. All Rights Reserved`}</p>
+          <p>
+            &copy; RLJ
+            {` ${year} `}
+            Entertainment, Inc. All Rights Reserved
+          </p>
         </div>
         <div className="terms-condition">
           <Router>
