@@ -1,11 +1,15 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Switch, Route, Link,
+  BrowserRouter as Router,
+  Route,
+  Link,
 } from 'react-router-dom';
+
+import './Header.css';
 
 export const Header: React.FC = () => {
   return (
-    <Route>
+    <Router>
       <header>
         <div className="navbar navbar-fixed-top" role="navigation">
           <div className="container">
@@ -41,6 +45,6 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </header>
-    </Route>
+    </Router>
   );
 };

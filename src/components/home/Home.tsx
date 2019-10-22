@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { GetLanguagesService } from '../../services/GetLanguagesService';
-
 import { Header } from '../shared/header/Header';
 import { Footer } from '../shared/footer/Footer';
 
@@ -10,10 +8,10 @@ import { Gift } from './gift/Gift';
 import { Content } from './content/About';
 import { Callout } from './callout/Content';
 
-export const Home: React.FC = () => {
+export const Home: React.FC = (props) => {
   const cloudFrontCounry = 'US';
-  const languages = GetLanguagesService();
-  console.log(languages);
+  console.log(props);
+
   return (
     <div className="home">
       <Header />

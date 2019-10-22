@@ -5,35 +5,14 @@ import {
   RouteComponentProps,
 } from 'react-router-dom';
 
+import { LanguageDropdown } from './language-dropdown/LanguageDropdown';
+
+
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
   const locale = 'en';
 
-  // const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {return void {
-  //   setState()
-  // }};
-
-  console.log(year, locale);
-
-  const LanguageDropdown = ({ locale }: { locale: string }) => {
-    return (
-      <div className="lang-select">
-        <label className="atv-locale" htmlFor="atvLocale">
-          language:
-          <select
-            name="atv_locale"
-            id="atvLocale"
-            aria-label="Locale"
-            defaultValue={locale}
-            // onChange={handleChange}
-          >
-            <option value="en">english</option>
-            <option value="es">spanish</option>
-          </select>
-        </label>
-      </div>
-    );
-  };
+  // console.log(year, locale);
 
   return (
     <footer>
@@ -83,7 +62,9 @@ export const Footer: React.FC = () => {
             </ul>
           </Router>
         </div>
-        <LanguageDropdown locale="en" />
+
+        <LanguageDropdown locale={locale} />
+
       </div>
     </footer>
   );
