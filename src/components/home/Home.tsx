@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { GetLanguagesService } from '../../services/GetLanguagesService';
+
 import { Header } from '../shared/header/Header';
 import { Footer } from '../shared/footer/Footer';
 
@@ -10,6 +12,8 @@ import { Callout } from './callout/Content';
 
 export const Home: React.FC = () => {
   const cloudFrontCounry = 'US';
+  const languages = GetLanguagesService();
+  console.log(languages);
   return (
     <div className="home">
       <Header />
