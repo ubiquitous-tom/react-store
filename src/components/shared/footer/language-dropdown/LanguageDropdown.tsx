@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ReactNode } from 'react';
 
-import { GetLanguagesService } from '../../../../services/GetLanguagesService';
+import { GetLanguagesService } from '../../../../services/languages/GetLanguagesService';
 
 // https://medium.com/innovation-and-technology/deciphering-typescripts-react-errors-8704cc9ef402
 interface LanguageDropdownProps {
@@ -11,9 +11,9 @@ export const LanguageDropdown: React.FC<LanguageDropdownProps> = ({ locale }) =>
   const languages = GetLanguagesService();
   const [newLocale, setNewLocale] = useState(locale);
 
-  useEffect(() => {
-    console.log('GetLanguageService useEffect');
-  });
+  // useEffect(() => {
+  //   console.log('GetLanguageService useEffect');
+  // });
 
   const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
     setNewLocale(event.target.value);
@@ -27,7 +27,7 @@ export const LanguageDropdown: React.FC<LanguageDropdownProps> = ({ locale }) =>
     return key in obj;
   }
 
-  console.log(languages, locale);
+  // console.log(languages, locale);
   return (
     <div className="lang-select">
       <label className="atv-locale" htmlFor="atvLocale">
@@ -42,7 +42,7 @@ export const LanguageDropdown: React.FC<LanguageDropdownProps> = ({ locale }) =>
           {Object.keys(languages).map((abbr, index): ReactNode => {
             if (hasKey(languages, abbr)) {
               // Need hasKey() function so Typescript won't throw type error
-              console.log(abbr, index, languages[abbr]);
+              // console.log(abbr, index, languages[abbr]);
               return <option key={index} value={abbr}>{languages[abbr]}</option>;
             }
             return null;

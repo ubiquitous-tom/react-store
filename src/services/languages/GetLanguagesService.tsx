@@ -20,9 +20,9 @@ export const GetLanguagesService = () => {
         return json;
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         const { languages } = response[0];
-        console.log(languages);
+        // console.log(languages);
 
         setResults(languages);
       })
