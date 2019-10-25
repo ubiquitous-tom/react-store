@@ -19,6 +19,7 @@ export interface UserInfoType {
   Streaming?: Record<string, any>;
   trialAvailable?: Record<string, any>;
 }
+type Info = { [key: string]: { prop: string | number | boolean | null } };
 
 export const Header: React.FC = () => {
   const [userInfo, setUserInfo] = useState(false);
@@ -32,7 +33,11 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     console.log('useEffect');
-    user.getUserStatus(checkUserStatus);
+    // user.getUserStatus(checkUserStatus);
+    user.getUserStatus((data: any) => {
+      console.log(data);
+      setUserInfo(data);
+    });
   }, []);
 
   function checkUserStatus(data: any) {
@@ -42,8 +47,8 @@ export const Header: React.FC = () => {
 
   function webPaymentEditNav() {
     console.log('webPaymentEditNav', userInfo);
-    // const { Membership: } = userInfo;
-    // console.log(Membership);
+    const { Membership } = userInfo;
+    console.log(Membership);
     // const { webPaymentEdit } = Membership;
 
     // console.log(webPaymentEdit);
@@ -57,6 +62,7 @@ export const Header: React.FC = () => {
   }
 
   function loggedInNav() {
+    console.log(userInfo, typeof userInfo);
     return (
       <>
         <li className="navbar-right">
@@ -87,8 +93,6 @@ export const Header: React.FC = () => {
   }
 
   function displayNavBar() {
-    // user.getUserStatus(checkUserStatus);
-    console.log(userInfo);
     if (userInfo) {
       return loggedInNav();
     }
