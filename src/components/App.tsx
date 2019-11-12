@@ -16,6 +16,7 @@ import { Give } from './give/Give';
 import { NoMatch } from './no-match/NoMatch';
 import { EditBilling } from './edit-billing/EditBilling';
 import { ReviewPurchase } from './reviewPurchase/ReviewPurchase';
+import { ApplyPromoCode } from './apply-promo-code/ApplyPromoCode';
 
 
 const App: React.FC = () => {
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <Route exact path="/membership" component={Membership} />
         <Route exact path="/editBilling" component={EditBilling} />
         <Route exact path="/reviewPurchase" component={ReviewPurchase} />
+        <Route exact path="/applyPromoCode" component={ApplyPromoCode} />
         <Route component={NoMatch} />
       </Switch>
     </HashRouter>

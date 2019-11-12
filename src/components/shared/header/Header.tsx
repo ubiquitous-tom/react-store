@@ -13,17 +13,22 @@ import UserInfoService from '../../../services/user/UserInfoService';
 export interface UserInfoType {
   BillingAddress?: Record<string, any>;
   Customer?: Record<string, any>;
-  Membershp?: Record<string, any>;
+  Membership?: Record<string, any>;
   PaymentMethod?: Record<string, any>;
   Session?: Record<string, any>;
   Streaming?: Record<string, any>;
   trialAvailable?: Record<string, any>;
 }
-type Info = { [key: string]: { prop: string | number | boolean | null } };
+// type Info = { [key: string]: { prop: string | number | boolean | null } };
+
+export interface Info {
+  Membership: string | undefined;
+  [key: string] : string | undefined;
+}
 
 export const Header: React.FC = () => {
-  const [userInfo, setUserInfo] = useState(false);
-  const [webPaymentEdit, setWebPaymentEdit] = useState(false);
+  const [userInfo, setUserInfo] = useState<Info | undefined>(undefined);
+  // const [webPaymentEdit, setWebPaymentEdit] = useState(undefined);
 
   const cookies = new Cookies();
   const atvSessionCookie = cookies.get('ATVSessionCookie');
@@ -31,27 +36,36 @@ export const Header: React.FC = () => {
 
   const user = new UserInfoService();
 
+  function checkUserStatus(data: any): void {
+    console.log(data);
+    setUserInfo(data);
+  }
+
   useEffect(() => {
     console.log('useEffect');
     // user.getUserStatus(checkUserStatus);
     user.getUserStatus((data: any) => {
       console.log(data);
-      setUserInfo(data);
+      if (!data.error) {
+        setUserInfo(data);
+      }
     });
   }, []);
 
-  function checkUserStatus(data: any) {
-    console.log(data);
-    setUserInfo(data);
-  }
-
   function webPaymentEditNav() {
     console.log('webPaymentEditNav', userInfo);
-    const { Membership } = userInfo;
-    console.log(Membership);
-    // const { webPaymentEdit } = Membership;
+    const { Membership } = userInfo as any;
 
-    // console.log(webPaymentEdit);
+    if (Membership) {
+      console.log(Membership);
+      const { WebPaymentEdit } = Membership as any;
+
+      console.log(WebPaymentEdit);
+      if (!WebPaymentEdit) {
+        return '';
+      }
+    }
+
     return (
       <li className="navbar-right">
         <Link className="log-in" to="/applyPromoCode">
@@ -70,7 +84,7 @@ export const Header: React.FC = () => {
           log out
           </Link>
         </li>
-        {webPaymentEdit && webPaymentEditNav()}
+        {webPaymentEditNav()}
       </>
     );
   }
@@ -93,6 +107,7 @@ export const Header: React.FC = () => {
   }
 
   function displayNavBar() {
+    console.log(userInfo);
     if (userInfo) {
       return loggedInNav();
     }
